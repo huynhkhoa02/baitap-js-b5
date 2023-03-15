@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--bootcstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <h3>tính diểm tuyển sinh</h3>
+  <div class="container mt-5">
+    <h1 class="mb-4">Tính điểm thi tuyển sinh</h1>
+    <form>
+      <div class="form-group row">
+        <label for="diemChuan" class="col-sm-3 col-form-label">Điểm chuẩn:</label>
+        <div class="col-sm-9">
+          <input type="number" class="form-control" id="diemChuan" placeholder="Nhập điểm chuẩn">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="diemToan" class="col-sm-3 col-form-label">Điểm toán:</label>
+        <div class="col-sm-9">
+          <input type="number" class="form-control" id="diemToan" placeholder="Nhập điểm toán">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="diemLy" class="col-sm-3 col-form-label">Điểm lý:</label>
+        <div class="col-sm-9">
+          <input type="number" class="form-control" id="diemLy" placeholder="Nhập điểm lý">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="diemHoa" class="col-sm-3 col-form-label">Điểm hóa:</label>
+        <div class="col-sm-9">
+          <input type="number" class="form-control" id="diemHoa" placeholder="Nhập điểm hóa">
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="khuVuc" class="col-sm-3 col-form-label">Khu vực:</label>
+        <div class="col-sm-9">
+          <select class="form-control" id="khuVuc">
+            <option value="X">Không thuộc khu vực ưu tiên</option>
+            <option value="A">Khu vực A</option>
+            <option value="B">Khu vực B</option>
+            <option value="C">Khu vực C</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="doiTuong" class="col-sm-3 col-form-label">Đối tượng:</label>
+        <div class="col-sm-9">
+          <select class="form-control" id="doiTuong">
+            <option value="0">Không thuộc đối tượng ưu tiên</option>
+            <option value="1">Đối tượng 1</option>
+            <option value="2">Đối tượng 2</option>
+            <option value="3">Đối tượng 3</option>
+          </select>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" onclick="tinhDiem()">Tính điểm</button>
+      <p id="ketQua"></p>
+  </div>
+  <hr>
+  <h3>Tính tiền điện</h3>
+  <div class="container">
+    <div class="form-control w-50">
+      <p>nhập tên</p>
+      <input type="text" id="ten">
+      <p>nhập số điện</p>
+      <input type="number" id="soKw">
+      <button type="button" class="btn btn-success" onclick="tinhTien()">tính tiền</button>
+      <p id="result"></p>
+    </div>
+  </div>
+  <hr>
+
+  <h3>tính tiền thuế</h3>
+  <div class="container">
+    <div class="form-control w-50" >
+      <p>nhập tên</p>
+      <input type="text" id="hoTen">
+      <p>tongot thu nhập 1 năm</p>
+      <input type="number" id="tongThuNhap">
+      <p>số người phụ thuộc</p>
+      <input type="number" id="soNguoiPhuThuoc">
+      <button type="button" class="btn btn-success" onclick="tinhThue()">tính tiền</button>
+      <p id="kq"></p>
+    </div>
+  </div>
+  <hr>
+  <h3>tính tiền cáp</h3>
+  <div class="container">
+    <div class="form-group w-50" >
+      <select class="form-control" id="loaiNha">
+        <option value="A">nhà dân</option>
+        <option value="B">doanh nghiệp</option>
+      <p>mã khách hàng</p>
+      <input type="number" id="soKetNoi">
+      <p>số kênh cao cấp</p>
+      <input type="number" id="soKenhCaoCap">
+
+      <button type="button" class="btn btn-success" onclick="tinhTienCap()">tính tiền</button>
+      <p id="bill"></p>
+    </div>
+  </div>
+
+
+
+
+  
+  <!--js custom-->
+  <script src="/js/index.js"></script>
+
+</body>
+
+</html>
